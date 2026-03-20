@@ -1,4 +1,4 @@
-name: idr_env
+name: flex_bind
 channels:
   - pytorch
   - nvidia
@@ -158,4 +158,4 @@ dependencies:
     - tqdm==4.67.1
     - transformers==4.56.1
     - triton==3.2.0
-prefix: /home/yjshon/anaconda3/envs/idr_env
+prefix: /home/yjshon/anaconda3/envs/flexbind
