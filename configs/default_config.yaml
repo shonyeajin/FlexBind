@@ -1,0 +1,18 @@
+# 10 Independent Random Seeds for Experimental Validity
+random_seeds: [42, 1234, 2023, 2024, 777, 888, 999, 1111, 2222, 3333]
+
+# Model Hyperparameters
+learning_rate: 0.0001
+weight_decay: 0.01
+batch_size: 32
+max_epochs: 100
+grad_clip: 1.0
+val_ratio: 0.1
+device: "cuda"
+
+# Multi-task Loss Weights
+task_weights:
+  disorder: 1.0
+  protein: 2.43
+  rna: 27.61
+  dna: 17.63
