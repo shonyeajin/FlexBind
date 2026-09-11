@@ -1,11 +1,13 @@
-# Weights Directory
+#!/bin/bash
 
-This directory contains the necessary model weights for running FlexBind.
+# 1. Download ProtT5-XL-U50 Pretrained Encoder Weights from official Hugging Face repository
+echo "Downloading ProtT5-XL-U50 Pretrained Encoder Weights..."
+wget -nc https://huggingface.co/Rostlab/prot_t5_xl_uniref50/resolve/main/pytorch_model.bin -O prott5_weights.bin
 
-1. **FlexBind Trained Models** (Included in this repository):
-   - `flexbind_dp81.pt`: Model trained on the DP81 dataset.
-   - `flexbind_dp93.pt`: Model trained on the DP93 dataset.
+# 2. Download FlexBind Pretrained Final Weights from Google Drive
+echo "Downloading FlexBind Pretrained Final Weights from Google Drive..."
+# Install gdown to download from Google Drive folder
+pip install gdown
+gdown --folder https://drive.google.com/drive/folders/1_bvX7NDH632E4ju6NmUOi1DO_ZDu2odq?usp=drive_link -O ./
 
-2. **ProtT5 Encoder Weights**:
-   - Due to size limits, the base ProtT5 encoder weights are not included directly. 
-   - Please run `bash download_weights.sh` to download `prott5_weights.bin` before running the evaluation or training scripts.
+echo "Download completed. Please ensure all .pt files are located in the weights/ directory."
