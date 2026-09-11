@@ -8,7 +8,7 @@ A deep learning framework for residue-level prediction of protein properties, in
 
 ---
 
-## 📌 Reproducibility & Reviewer Guide
+## 📌 Reproducibility
 To fully satisfy requirements for generalization, experimental validity, and methodological rigor, this repository explicitly provides:
 - **Exact Preprocessing & Split Commands**: Provided in `data/preprocess.sh`
 - **Configuration Files & Random Seeds**: Defined in `configs/default_config.yaml`
